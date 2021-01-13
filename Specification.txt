@@ -1,0 +1,22 @@
+1. Implement the following classes in your application:
+
+Person 
+    First name
+    Last name
+    Age
+
+Employee (inherits from the person class)
+    Full name
+    Organization 
+    Employee ID
+
+Organization
+    Organization Name 
+    Organization ID
+    List of employees
+
+2. Create appropriate initializers for the classes.
+
+3. Allow user to:   Add new organization
+4.                  Add employee to existing organization
+5.                  Read about atomic attributes
