@@ -7,6 +7,7 @@ class Organizations with ChangeNotifier {
   List<Organization> _list;
 
   Organizations() {
+    // for default view
     _list = [
       Organization('Jio', 'JIO-X583'),
       Organization('Airtel', 'AIR-J512'),
@@ -18,6 +19,16 @@ class Organizations with ChangeNotifier {
         'Patekar',
         DateTime(2000, 1, 1),
         _list[0].organizationId,
+        DateTime.now().toString(),
+      ),
+    );
+
+    _list[1].addEmployee(
+      Employee(
+        'Horshod',
+        'Mehta',
+        DateTime(1970, 3, 5),
+        _list[1].organizationId,
         DateTime.now().toString(),
       ),
     );
