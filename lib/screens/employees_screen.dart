@@ -7,7 +7,7 @@ class EmployeesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Employee Database'),
+          title: Text('All Employees'),
         ),
         body: Center(
           child: Text('This is add employee page'),

@@ -22,7 +22,7 @@ class OrganizationsScreen extends StatelessWidget {
     final organizations = organizationsData.list;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Employee Database'),
+        title: Text('Organizations'),
       ),
       body: ListView.builder(
         itemBuilder: (_, index) => OrganizationItem(organizations[index]),
