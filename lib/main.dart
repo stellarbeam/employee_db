@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:employee_db/widgets/home_screen.dart';
+import 'package:employee_db/screens/home_screen.dart';
+import 'package:employee_db/screens/organizations_screen.dart';
+import 'package:employee_db/screens/employees_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +17,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
+      routes: {
+        OrganizationsScreen.routeName: (_) => OrganizationsScreen(),
+        EmployeesScreen.routeName: (_) => EmployeesScreen(),
+      },
     );
   }
 }

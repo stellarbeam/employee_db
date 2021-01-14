@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:employee_db/widgets/menu_item.dart';
+import 'package:employee_db/screens/organizations_screen.dart';
+import 'package:employee_db/screens/employees_screen.dart';
 
 class MenuGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      primary: false,
-      padding: const EdgeInsets.all(20),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
-      crossAxisCount: 2,
-      childAspectRatio: 3 / 2,
-      children: <Widget>[
-        // TODO: Outsource widgets to MenuItem widgets
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: Center(child: const Text("Add Organization")),
-          color: Colors.pink,
-        ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          child: Center(child: const Text("Add Employee")),
-          color: Colors.pink,
-        ),
-      ],
+    return Container(
+      child: Column(
+        children: <Widget>[
+          MenuItem(
+            'Organizations',
+            'assets/images/organization.jpeg',
+            OrganizationsScreen.routeName,
+          ),
+          MenuItem(
+            'Employees',
+            'assets/images/employee.jpeg',
+            EmployeesScreen.routeName,
+          ),
+        ],
+      ),
     );
   }
 }
