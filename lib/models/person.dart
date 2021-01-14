@@ -11,6 +11,7 @@ class Person {
 
   int get age {
     var today = DateTime.now();
+    // TODO: replace with by-hand method logic
     return (today.difference(_dateOfBirth).inDays / 365.25).floor();
   }
 }

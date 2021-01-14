@@ -1,4 +1,5 @@
 import 'package:employee_db/providers/organizations.dart';
+import 'package:employee_db/screens/organization_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -32,6 +33,8 @@ class MyApp extends StatelessWidget {
         routes: {
           OrganizationsScreen.routeName: (_) => OrganizationsScreen(),
           EmployeesScreen.routeName: (_) => EmployeesScreen(),
+          OrganizationDetailsScreen.routeName: (_) =>
+              OrganizationDetailsScreen(),
         },
       ),
     );

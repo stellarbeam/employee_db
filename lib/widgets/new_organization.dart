@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:employee_db/models/organization.dart';
+import 'package:employee_db/providers/organization.dart';
 
 class NewOrganization extends StatefulWidget {
   final Function addNewOrganization;
@@ -18,13 +18,9 @@ class _NewOrganizationState extends State<NewOrganization> {
     final name = _nameController.text;
     final id = _idController.text;
 
-    print('Try to submit');
-
     if (name.isEmpty || id.isEmpty) {
       return;
     }
-
-    print('Test passed');
 
     widget.addNewOrganization(Organization(name, id));
 

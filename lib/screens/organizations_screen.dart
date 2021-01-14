@@ -9,7 +9,9 @@ class OrganizationsScreen extends StatelessWidget {
   static const routeName = '/add-org';
 
   void _openNewOrganizationForm(
-      BuildContext context, Function addNewOrganization) {
+    BuildContext context,
+    Function addNewOrganization,
+  ) {
     showModalBottomSheet(
       context: context,
       builder: (_) => NewOrganization(addNewOrganization),
@@ -25,7 +27,10 @@ class OrganizationsScreen extends StatelessWidget {
         title: Text('Organizations'),
       ),
       body: ListView.builder(
-        itemBuilder: (_, index) => OrganizationItem(organizations[index]),
+        itemBuilder: (_, index) => ChangeNotifierProvider.value(
+          value: organizations[index],
+          child: OrganizationItem(),
+        ),
         itemCount: organizations.length,
       ),
       floatingActionButton: FloatingActionButton(
