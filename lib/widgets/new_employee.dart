@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:employee_db/models/employee.dart';
 
 class NewEmployee extends StatefulWidget {
   final String orgId;
