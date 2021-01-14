@@ -15,7 +15,7 @@ class MenuGrid extends StatelessWidget {
             OrganizationsScreen.routeName,
           ),
           MenuItem(
-            'Employees',
+            'All Employees',
             'assets/images/employee.jpeg',
             EmployeesScreen.routeName,
           ),
